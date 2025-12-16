@@ -36,7 +36,7 @@ function saveName() {
 
         // Salva o nome e redireciona para a página secreta
         localStorage.setItem("playerName", "Ren");
-        window.location.href = "../c._._/html/pag3.html";
+        window.location.href = "../c._._/htmlregras/pag4.html";
         return;
     }
 
