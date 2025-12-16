@@ -6,7 +6,7 @@ document.getElementById("title").textContent = name
 
 function acceptJourney() {
     localStorage.setItem("acceptedJourney", "true");
-    window.location.href = "pag2.html";
+    window.location.href = "pag3.html";
 }
 
 function declineJourney() {

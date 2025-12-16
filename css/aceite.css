@@ -1,5 +1,6 @@
 html{
-    background-color: black;
+    background: url(../img/nave.jpg);
+    background-size: auto;  
 }
 
 section.cont{
@@ -12,16 +13,18 @@ section.cont h1{
 padding: 5px;
 color: red;
   text-shadow: 2px 2px 4px rgb(255, 114, 6);
-   -webkit-text-stroke-width: 1px; /* Espessura da borda (para compatibilidade) */
-  -webkit-text-stroke-color: rgb(128, 0, 0); /* Cor da borda (para compatibilidade) */
+   -webkit-text-stroke-width: 1px; 
+  -webkit-text-stroke-color: rgb(128, 0, 0); 
 display: inline;
 background-color: rgb(226, 255, 83);
 border: 3px solid rgb(198, 3, 3);
+font-size: 3rem;
 border-radius: 5px;
 }
 
 section.cont p{
     padding: 10px;  
+    font-size: 1.8rem;
 }
 
 button.aceito{

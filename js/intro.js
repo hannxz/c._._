@@ -36,12 +36,12 @@ function saveName() {
 
         // Salva o nome e redireciona para a página secreta
         localStorage.setItem("playerName", "Ren");
-        window.location.href = "../c._._/html/pag2.html";
+        window.location.href = "../c._._/html/pag3.html";
         return;
     }
 
     // Usuários normais
     const formattedName = input.charAt(0).toUpperCase() + input.slice(1);
     localStorage.setItem("playerName", formattedName);
-    window.location.href = "../c._._/html/enigma.html"; // enigma
+    window.location.href = "../c._._/html/pag2.html"; // enigma
 }
