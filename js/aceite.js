@@ -1,16 +1,16 @@
 const name = localStorage.getItem("playerName");
 
 document.getElementById("title").textContent = name
-    ? `${name}, este é o último aviso`
-    : "Este é o último aviso";
+    ? name
+    : "Viajante";
 
 function acceptJourney() {
     localStorage.setItem("acceptedJourney", "true");
-    window.location.href = "../htmlregras/pag3.html";
+    window.location.href = "../html/comprovante.html";
 }
 
 function declineJourney() {
     localStorage.removeItem("acceptedJourney");
     alert("Alguns caminhos exigem coragem, mas pelo visto você não tem o que o caminho necessita.");
-    window.location.href = "index.html";
+    window.location.href = "../index.html";
 }

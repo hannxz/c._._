@@ -1,0 +1,135 @@
+
+header ul{
+    display: flex;
+   gap: 20px;
+   padding: 10px 20px;
+   justify-content: center;
+   background-color: #557570;
+   color: #D6DCD8;
+}
+
+header ul p{
+     font-weight: bolder;
+     font-size: 1.2rem;
+}
+
+
+
+header ul li a{
+    font-size: 1.2rem;
+    color: #376d4b;
+    background-color: #a4ded8;
+    border-radius: 50px;
+    border: 3px solid #376d4b;
+    padding: 5px 10px;
+     cursor: pointer;
+}
+
+header a.marc{
+      background-color: #7fb7be;
+        color: #273a74;
+          border: 3px solid rgb(84, 88, 124);
+        font-weight: bolder;
+}
+
+ header a:hover {
+        background-color: #D6DCD8;
+        color: #68afa4;
+          border: 3px solid rgb(145, 151, 206);
+        font-weight: bolder;
+    }
+
+
+    /*
+---------------MAIN----------------
+*/
+
+
+section.sec1{
+background-color: #D6DCD8;
+padding: 10vw 10vw;
+text-align: center;
+}
+
+section.sec1 p{
+    padding: 2vw;
+    color: #49425b;
+    font-size: 1.5rem;
+}
+
+section.sec1 span{
+  font-weight: bolder  ;
+}
+
+section.sec1 h1{
+    font-size: 4rem;
+    text-shadow: 2px 2px gray;
+    color: #557570;
+}
+
+section.sec2{
+    background: url(../img/fundo1.jpg);
+    background-size: cover;
+     background-repeat: no-repeat;
+  background-position: center center;
+    padding: 15vw 15vw;
+    text-align: center;
+    font-size: 2rem;
+    color: #49425b;
+}
+
+section.sec2 p{
+    background-color: #7baaa3;
+    text-shadow: 1.5px 1.5px  rgb(109, 107, 122);
+    border-radius: 10px;
+    padding: 20px 25px;
+    border: 4px solid #0e1262;
+}
+
+section.sec3{
+    padding: 5vw 5vw;
+background-color: #000000;
+}
+
+section.sec3 ul li{
+padding: 20px;
+}
+
+section.sec3 ul{
+    border-radius: 10px;
+    background-color: #a4b3de;
+    box-shadow: 1px 2px 4px 2px rgb(198, 183, 183);
+}
+
+section.sec3 h3{
+    color: #557570;
+    font-size: 2.5rem;
+}
+
+section.sec3 p{
+    color: #49425b;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+footer{
+    background: url(../img/fundo2.jpg);
+    padding : 3vw 3vw;
+    text-align: center;
+}
+
+footer img{
+    margin: 20px 10px;
+    max-width: 6%;
+    border-radius: 15px;
+}
+
+footer p{
+    font-size: 1.3rem;
+    color: #244731;
+    padding: 10px 20px;
+    border: 4px solid #244731 ;
+    border-radius: 10px;
+    font-weight: bolder;
+    background-color: #a4ded8;
+}

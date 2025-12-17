@@ -25,6 +25,7 @@ border-radius: 5px;
 section.cont p{
     padding: 10px;  
     font-size: 1.8rem;
+    color: yellow;
 }
 
 button.aceito{
