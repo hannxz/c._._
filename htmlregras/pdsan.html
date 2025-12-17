@@ -106,11 +106,22 @@
 
   
 <footer>
-   <p> Disponibilização do PDF e o link do site no canal SISTEMA do servidor do discord</p>
+    <p>Disponibilização do PDF e o link do site no canal SISTEMA do servidor do discord</p>
+
+    <p>
+        Copyright © <span id="year"></span> All rights reserved
+    </p>
+
     <a href="https://discord.gg/hQNzhHEkEH">
         <img src="../img/discordlogo.jpg" alt="discordlogo">
     </a>
 </footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<script src="../js/script.js"></script>
 
 </body>
 
