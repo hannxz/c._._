@@ -21,7 +21,7 @@ function saveName() {
     }
 
     if (!allowedUsers.includes(input)) {
-        alert("Esse nome não ecoa neste lugar.");
+        alert("Este nome não está cadastrado no sistema, favor tentar novamente.");
         return;
     }
 
