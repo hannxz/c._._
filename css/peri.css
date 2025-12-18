@@ -1,3 +1,8 @@
+* {
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+
 
 header ul{
     display: flex;
@@ -115,17 +120,17 @@ section.sec3 ul li a{
     padding: 40px;
     border: 2px solid #351fb3;
     margin: 3.5vw;
+    transition: 0.3s;
     color: #a4b3de;
     text-align: center;
-    border-radius: 50px;
+    border-radius: 12px;
 }
 
 section.sec3 ul li a:hover {
      border: 2px solid #462ae2;
         background-color: #301e95;
         color: #b9caf7;
-    padding: 35px;
-    font-size: 1.4rem;
+        transform: translateY(-4px) scale(1.03);
     }
 
 footer{

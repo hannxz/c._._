@@ -1,0 +1,98 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Fundo geral */
+body {
+  background: linear-gradient(180deg, #0b0f1a, #111827);
+  color: #e5e7eb;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* Caixa principal */
+.raca {
+  max-width: 900px;
+  margin: auto;
+  background: rgba(17, 24, 39, 0.95);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Nome da raça */
+.raca h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #fbbf24;
+  letter-spacing: 2px;
+}
+
+/* Texto descritivo */
+#descricao p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 18px;
+  text-align: justify;
+}
+
+/* Subtítulo bônus */
+.raca h2 {
+  margin-top: 35px;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  color: #38bdf8;
+  border-bottom: 2px solid #38bdf8;
+  padding-bottom: 5px;
+}
+
+/* Lista de bônus */
+#bonus ul {
+  list-style: none;
+  margin-top: 15px;
+}
+
+#bonus li {
+  background: rgba(31, 41, 55, 0.8);
+  padding: 12px 18px;
+  margin-bottom: 10px;
+  border-left: 5px solid #22c55e;
+  border-radius: 8px;
+  font-size: 1.05rem;
+}
+
+/* Botão voltar */
+.voltar {
+  display: inline-block;
+  margin-top: 35px;
+  text-decoration: none;
+  color: #0f172a;
+  background: #fbbf24;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.voltar:hover {
+  background: #fde047;
+  transform: scale(1.05);
+}
+
+#imagem-raca {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 25px auto 35px;
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+}
+
+#imagem-raca {
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}

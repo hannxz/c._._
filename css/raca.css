@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+
+header ul{
+    display: flex;
+   gap: 20px;
+   padding: 10px 20px;
+   justify-content: center;
+   background-color: #557570;
+   color: #D6DCD8;
+}
+
+header ul p{
+     font-weight: bolder;
+     font-size: 1.2rem;
+}
+
+
+
+header ul li a{
+    font-size: 1.2rem;
+
+    color: #376d4b;
+    background-color: #a4ded8;
+    border-radius: 50px;
+    border: 3px solid #529f6e;
+    padding: 5px 10px;
+     cursor: pointer;
+}
+
+header a.marc{
+      background-color: #7fb7be;
+        color: #3c57a7;
+          border: 3px solid rgb(108, 114, 161);
+        font-weight: bolder;
+}
+
+ header a:hover {
+        background-color: #D6DCD8;
+        color: #68afa4;
+          border: 3px solid rgb(163, 170, 233);
+        font-weight: bolder;
+    }
+
+body {
+  background: radial-gradient(circle at top, #020617, #020617 40%, #000);
+  color: #e5e7eb;
+  min-height: 100vh;
+
+}
+
+/* Título */
+h1 {
+  text-align: center;
+  font-size: 3rem;
+     margin-top: 10px;
+    margin-bottom: 10px;
+  color: #38bdf8;
+  letter-spacing: 3px;
+}
+
+/* Container dos links */
+.lista-racas {
+    
+  max-width: 600px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* Links */
+.lista-racas a {
+  display: block;
+      margin-top: 10px;
+    margin-bottom: 10px;
+  text-align: center;
+  text-decoration: none;
+  background: rgba(30, 41, 59, 0.9);
+  color: #f1f5f9;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  transition: 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.lista-racas a:hover {
+  background: #38bdf8;
+  color: #020617;
+  transform: translateY(-4px) scale(1.03);
+  font-weight: bold;
+}
+
+footer {
+    background: url(../img/fundo2.jpg);
+    padding: 1.5vw 1.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+}
+
+footer img {
+    margin: 20px 10px;
+    max-width: 7%;
+    border-radius: 15px;
+}
+
+footer p {
+    font-size: 1.3rem;
+    color: #244731;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bolder;
+    background-color: #a4ded8;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .lista-racas {
+    grid-template-columns: 1fr;
+  }
+}
