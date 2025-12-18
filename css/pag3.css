@@ -20,25 +20,24 @@ header ul li a{
     color: #376d4b;
     background-color: #a4ded8;
     border-radius: 50px;
-    border: 3px solid #376d4b;
+    border: 3px solid #529f6e;
     padding: 5px 10px;
      cursor: pointer;
 }
 
 header a.marc{
       background-color: #7fb7be;
-        color: #273a74;
-          border: 3px solid rgb(84, 88, 124);
+        color: #3c57a7;
+          border: 3px solid rgb(108, 114, 161);
         font-weight: bolder;
 }
 
  header a:hover {
         background-color: #D6DCD8;
         color: #68afa4;
-          border: 3px solid rgb(145, 151, 206);
+          border: 3px solid rgb(163, 170, 233);
         font-weight: bolder;
     }
-
 
     /*
 ---------------MAIN----------------

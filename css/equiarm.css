@@ -1,0 +1,219 @@
+
+header ul{
+    display: flex;
+   gap: 20px;
+   padding: 10px 20px;
+   justify-content: center;
+   background-color: #557570;
+   color: #D6DCD8;
+}
+
+header ul p{
+     font-weight: bolder;
+     font-size: 1.2rem;
+}
+
+
+
+header ul li a{
+    font-size: 1.2rem;
+    color: #376d4b;
+    background-color: #a4ded8;
+    border-radius: 50px;
+    border: 3px solid #529f6e;
+    padding: 5px 10px;
+     cursor: pointer;
+}
+
+header a.marc{
+      background-color: #7fb7be;
+        color: #3c57a7;
+          border: 3px solid rgb(108, 114, 161);
+        font-weight: bolder;
+}
+
+ header a:hover {
+        background-color: #D6DCD8;
+        color: #68afa4;
+          border: 3px solid rgb(163, 170, 233);
+        font-weight: bolder;
+    }
+
+main{
+text-align: center;
+}
+    section.titulo{
+        padding: 15vw;
+         font-size: 2rem;
+        text-shadow: 2px 2px gray;
+    color: #557570;
+    background-color: #D6DCD8;
+    }
+
+section.armas{
+background-color: black;
+color: #a4ded8;
+
+}
+
+section.armas span{
+    color: #e26c05;
+}
+
+section.armas h4{
+    font-size: 1.7rem;
+    color: #8757cb;
+}
+
+section.armas h2{
+font-size: 3.7rem;
+padding: 30px;
+text-shadow: 1px 1px 4px  rgb(11, 17, 202);
+}
+
+section.armas ul li{
+    border: 3px solid rgb(108, 110, 168);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+section.armas ul{
+    padding-bottom: 20px;
+}
+
+section.armas h3{
+font-size: 1.7rem;
+border-radius: 50px;
+padding: 10px;
+background-color: #1e135f;
+color: #a4b3de;
+display: inline-block;
+}
+
+
+.armas ul li p{
+font-size: 1.2rem;
+padding: 15px;
+}
+
+
+.peque{
+    font-size: 0.8rem;
+    color: yellow;
+}
+
+section.equi h2{
+font-size: 5rem;
+padding: 30px;
+color: #7fb7be;
+text-shadow: 1px 1px 4px  rgb(11, 17, 202);
+}
+
+section.equi{
+    background-color: #1e135f;
+    padding: 8vw;
+}
+section.equi ul li h3{
+        color: #a4b3de;
+        font-size: 1.8rem;
+}
+
+section.equi span{
+    color: #e26c05;
+}
+
+section.planilha h2{
+color: #a4ded8;
+padding: 50px;
+font-size: 3.7rem;
+text-shadow: 1px 1px 4px  rgb(11, 17, 202);
+}
+
+section.planilha{
+    background-color: black;
+}
+
+.planilha {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    padding: 50px;
+}
+
+.planilha th,
+.planilha td {
+    border: 2px solid rgb(119, 146, 204);
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+/* Cabeçalho */
+.planilha thead th {
+    background-color: #c1d8f6;
+    color: #1e00b3;
+    font-weight: bold;
+}
+
+/* Coluna ITEM / FUNCIONALIDADE */
+.planilha tbody th {
+    background-color: #c1e3f6;
+    color: #007db3;
+    font-weight: bold;
+}
+
+/* Células de descrição */
+.planilha td {
+    background-color: #d3d2fd;
+}
+
+/* Linha de espaços */
+.planilha .espacos td,
+.planilha .espacos th {
+    background-color: #8aa5ff;
+    font-weight: bold;
+}
+
+.negativo {
+    color: red;
+    font-weight: bold;
+}
+
+.medio {
+    color: #b35400;
+    font-weight: bold;
+}
+
+.positivo {
+    color: green;
+    font-weight: bold;
+}
+
+
+
+
+footer{
+    background: url(../img/fundo2.jpg);
+    padding : 1.5vw 1.5vw;
+      display: flex;
+    flex-direction: column; 
+    align-items: center;  
+    gap: 15px;    
+    text-align: center;
+}
+
+footer img{
+    margin: 20px 10px;
+    max-width: 7%;
+    border-radius: 15px;
+}
+
+footer p{
+    font-size: 1.3rem;
+    color: #244731;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bolder;
+    background-color: #a4ded8;
+}
