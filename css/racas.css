@@ -1,4 +1,4 @@
-/* Reset básico */
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,6 @@
   font-family: "Segoe UI", Arial, sans-serif;
 }
 
-/* Fundo geral */
 body {
   background: linear-gradient(180deg, #0b0f1a, #111827);
   color: #e5e7eb;
@@ -14,7 +13,6 @@ body {
   padding: 40px 20px;
 }
 
-/* Caixa principal */
 .raca {
   max-width: 900px;
   margin: auto;
@@ -24,7 +22,6 @@ body {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
 }
 
-/* Nome da raça */
 .raca h1 {
   font-size: 3rem;
   text-align: center;
@@ -33,7 +30,6 @@ body {
   letter-spacing: 2px;
 }
 
-/* Texto descritivo */
 #descricao p {
   font-size: 1.1rem;
   line-height: 1.8;
@@ -41,7 +37,7 @@ body {
   text-align: justify;
 }
 
-/* Subtítulo bônus */
+
 .raca h2 {
   margin-top: 35px;
   margin-bottom: 15px;
@@ -51,7 +47,6 @@ body {
   padding-bottom: 5px;
 }
 
-/* Lista de bônus */
 #bonus ul {
   list-style: none;
   margin-top: 15px;
@@ -66,7 +61,6 @@ body {
   font-size: 1.05rem;
 }
 
-/* Botão voltar */
 .voltar {
   display: inline-block;
   margin-top: 35px;

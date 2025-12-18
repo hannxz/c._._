@@ -2,38 +2,6 @@
   font-family: "Segoe UI", Arial, sans-serif;
 }
 
-header ul{
-    display: flex;
-   gap: 20px;
-   padding: 10px 20px;
-   justify-content: center;
-   background-color: #557570;
-   color: #D6DCD8;
-}
-
-header ul p{
-     font-weight: bolder;
-     font-size: 1.2rem;
-}
-
-
-header ul li a{
-    font-size: 1.2rem;
-    color: #376d4b;
-    background-color: #a4ded8;
-    border-radius: 50px;
-    border: 3px solid #529f6e;
-    padding: 5px 10px;
-     cursor: pointer;
-}
-
-
- header a:hover {
-        background-color: #D6DCD8;
-        color: #68afa4;
-          border: 3px solid rgb(163, 170, 233);
-        font-weight: bolder;
-    }
 
 body{
     background-color: black;
@@ -74,26 +42,21 @@ body{
         }
 
 footer {
-    background: url(../img/fundo2.jpg);
-    padding: 1.5vw 1.5vw;
+    background-color: #0a1a3c;
+    padding: 20px;
+    text-align: center;
+    color: #d6dcd8;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    text-align: center;
 }
 
 footer img {
-    margin: 20px 10px;
     max-width: 7%;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 footer p {
-    font-size: 1.3rem;
-    color: #244731;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-weight: bolder;
-    background-color: #a4ded8;
+    font-weight: bold;
 }

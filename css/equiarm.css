@@ -1,15 +1,12 @@
 * {
   font-family: "Segoe UI", Arial, sans-serif;
 }
-
-
-
 header ul{
     display: flex;
    gap: 20px;
    padding: 10px 20px;
    justify-content: center;
-   background-color: #557570;
+   background-color: #575575;
    color: #D6DCD8;
 }
 
@@ -18,41 +15,44 @@ header ul p{
      font-size: 1.2rem;
 }
 
-
-
 header ul li a{
     font-size: 1.2rem;
-    color: #376d4b;
-    background-color: #a4ded8;
+ transition: all 0.3s ease;
+ color: #00bfff;
+    background-color: #1e2a50;
     border-radius: 50px;
-    border: 3px solid #529f6e;
+    border: 2px solid #00bfff;
     padding: 5px 10px;
      cursor: pointer;
 }
 
 header a.marc{
-      background-color: #7fb7be;
-        color: #3c57a7;
-          border: 3px solid rgb(108, 114, 161);
-        font-weight: bolder;
+   background-color: #007acc;
+    color: #ffffff;
+    border: 2px solid #00bfff;
 }
 
  header a:hover {
-        background-color: #D6DCD8;
-        color: #68afa4;
-          border: 3px solid rgb(163, 170, 233);
-        font-weight: bolder;
+         background-color: #00bfff;
+    color: #0a1a3c;
+    font-weight: bolder;
     }
-
 main{
 text-align: center;
 }
     section.titulo{
         padding: 15vw;
-         font-size: 2rem;
-        text-shadow: 2px 2px gray;
-    color: #557570;
-    background-color: #D6DCD8;
+     background: linear-gradient(180deg, #a4b3de, #1c397c);
+    }
+
+    section.titulo h1{
+        font-size: 3rem;
+  margin-bottom: 20px;
+  color: #fbbf24;
+  letter-spacing: 3px;
+  box-shadow: 0 0 25px rgba(76, 75, 75, 0.6);
+  background-color: rgba(15, 23, 42, 0.85);
+  border-radius: 15px;
     }
 
 section.armas{
@@ -154,26 +154,22 @@ section.planilha{
     font-size: 14px;
 }
 
-/* Cabeçalho */
 .planilha thead th {
     background-color: #c1d8f6;
     color: #1e00b3;
     font-weight: bold;
 }
 
-/* Coluna ITEM / FUNCIONALIDADE */
 .planilha tbody th {
     background-color: #c1e3f6;
     color: #007db3;
     font-weight: bold;
 }
 
-/* Células de descrição */
 .planilha td {
     background-color: #d3d2fd;
 }
 
-/* Linha de espaços */
 .planilha .espacos td,
 .planilha .espacos th {
     background-color: #8aa5ff;
@@ -197,28 +193,22 @@ section.planilha{
 
 
 
-
-footer{
-    background: url(../img/fundo2.jpg);
-    padding : 1.5vw 1.5vw;
-      display: flex;
-    flex-direction: column; 
-    align-items: center;  
-    gap: 15px;    
+footer {
+    background-color: #0a1a3c;
+    padding: 20px;
     text-align: center;
+    color: #d6dcd8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
-footer img{
-    margin: 20px 10px;
+footer img {
     max-width: 7%;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
-footer p{
-    font-size: 1.3rem;
-    color: #244731;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-weight: bolder;
-    background-color: #a4ded8;
+footer p {
+    font-weight: bold;
 }

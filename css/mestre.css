@@ -1,0 +1,249 @@
+body {
+    margin: 0;
+    background: #0b0b14;
+    color: #eaeaff;
+    font-family: Georgia, serif;
+}
+
+header ul{
+    display: flex;
+   gap: 20px;
+   padding: 10px 20px;
+   justify-content: center;
+   background-color: #575575;
+   color: #D6DCD8;
+}
+
+header ul p{
+     font-weight: bolder;
+     font-size: 1.2rem;
+}
+
+header ul li a{
+    font-size: 1.2rem;
+ transition: all 0.3s ease;
+ color: #00bfff;
+    background-color: #1e2a50;
+    border-radius: 50px;
+    border: 2px solid #00bfff;
+    padding: 5px 10px;
+     cursor: pointer;
+}
+
+header a.marc{
+   background-color: #007acc;
+    color: #ffffff;
+    border: 2px solid #00bfff;
+}
+
+ header a:hover {
+         background-color: #00bfff;
+    color: #0a1a3c;
+    font-weight: bolder;
+    }
+
+
+
+.aba-mestre {
+    padding: 2rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.pericia {
+    display: grid;
+    grid-template-columns: 1.5fr 0.6fr 0.9fr 1fr 0.6fr;
+    gap: 0.4rem;
+    align-items: center;
+    background: #1d1d3a;
+    padding: 0.4rem;
+    border-radius: 6px;
+    margin-bottom: 0.4rem;
+    font-size: 0.85rem;
+}
+
+.pericia input,
+.pericia select {
+    background: #0e0e1e;
+    border: none;
+    color: #fff;
+    padding: 0.25rem;
+    border-radius: 4px;
+}
+
+.pericia input[readonly] {
+    background: #14142b;
+    color: #9fa8ff;
+}
+
+
+
+.layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.lista-fichas {
+    background: #14142b;
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.lista-fichas ul {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-fichas li {
+    padding: 0.5rem;
+    background: #1d1d3a;
+    border-radius: 6px;
+    margin-bottom: 0.4rem;
+    cursor: pointer;
+}
+
+.lista-fichas li:hover {
+    background: #2a2a5c;
+}
+
+.ficha {
+    background: #14142b;
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+input, textarea {
+    width: 100%;
+    margin-bottom: 0.6rem;
+    padding: 0.4rem;
+    border-radius: 6px;
+    border: none;
+    background: #0e0e1e;
+    color: #fff;
+}
+
+textarea {
+    width: 100%;
+    min-height: 80px;
+    resize: vertical;
+}
+
+.acoes-ficha {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.acoes-ficha .btn {
+    padding: 0.9rem 1.6rem;
+    font-size: 1rem;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.25s ease;
+    text-align: center;
+}
+
+.acoes-ficha .exportar {
+    background: linear-gradient(135deg, #3b2fd9, #5a4bff);
+    color: #fff;
+    border-color: #6c5cff;
+}
+
+.acoes-ficha .exportar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(90, 75, 255, 0.4);
+}
+
+.acoes-ficha .importar {
+    background: linear-gradient(135deg, #121212, #1f1f1f);
+    color: #d4d4ff;
+    border-color: #3b2fd9;
+}
+
+.acoes-ficha .importar:hover {
+    background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(59, 47, 217, 0.35);
+}
+
+.acoes-ficha .btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.6rem;
+}
+
+.botoes {
+    display: flex;
+    gap: 1rem;
+}
+
+.inventario-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.inventario-box textarea {
+    min-height: 160px;
+}
+
+
+button {
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: none;
+    background: #3a2fe0;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #564cff;
+}
+
+button.remover {
+    background: #7a1e1e;
+}
+
+button.remover:hover {
+    background: #a52a2a;
+}
+
+footer {
+    background-color: #0a1a3c;
+    padding: 20px;
+    text-align: center;
+    color: #d6dcd8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+footer img {
+    max-width: 7%;
+    border-radius: 10px;
+}
+
+footer p {
+    font-weight: bold;
+}
+

@@ -9,7 +9,7 @@ header ul{
    gap: 20px;
    padding: 10px 20px;
    justify-content: center;
-   background-color: #557570;
+   background-color: #575575;
    color: #D6DCD8;
 }
 
@@ -18,34 +18,31 @@ header ul p{
      font-size: 1.2rem;
 }
 
-
-
 header ul li a{
     font-size: 1.2rem;
-    color: #376d4b;
-    background-color: #a4ded8;
+ transition: all 0.3s ease;
+ color: #00bfff;
+    background-color: #1e2a50;
     border-radius: 50px;
-    border: 3px solid #529f6e;
+    border: 2px solid #00bfff;
     padding: 5px 10px;
      cursor: pointer;
 }
 
 header a.marc{
-      background-color: #7fb7be;
-        color: #3c57a7;
-          border: 3px solid rgb(108, 114, 161);
-        font-weight: bolder;
+   background-color: #007acc;
+    color: #ffffff;
+    border: 2px solid #00bfff;
 }
 
  header a:hover {
-        background-color: #D6DCD8;
-        color: #68afa4;
-          border: 3px solid rgb(163, 170, 233);
-        font-weight: bolder;
+         background-color: #00bfff;
+    color: #0a1a3c;
+    font-weight: bolder;
     }
 
 section.sec1 {
-    background-color: black;
+    background-color: #03102b;
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -54,8 +51,8 @@ section.sec1 {
 
 section.sec1 h1 {
     font-size: 4rem;
-    text-shadow: 2px 2px rgb(66, 65, 65);
-    color: #90d4ca;
+  color: #fbbf24;
+  letter-spacing: 3px;
     padding-bottom: 20px;
 }
 
@@ -100,32 +97,22 @@ section.sec1 h1 {
     font-weight: bold;
 }
 
-
-
-
-
-
 footer {
-    background: url(../img/fundo2.jpg);
-    padding: 1.5vw 1.5vw;
+    background-color: #0a1a3c;
+    padding: 20px;
+    text-align: center;
+    color: #d6dcd8;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    text-align: center;
 }
 
 footer img {
-    margin: 20px 10px;
     max-width: 7%;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 footer p {
-    font-size: 1.3rem;
-    color: #244731;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-weight: bolder;
-    background-color: #a4ded8;
+    font-weight: bold;
 }

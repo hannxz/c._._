@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Ficha</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/mestre.css">
+</head>
+<body>
+
+<header>
+        <ul>
+            <p>
+            Criação ficha :
+            </p>
+            <li>
+                <a href="atributos.html">Atributos</a>
+            </li>
+            <li>
+                <a href="pericias.html">Perícias</a>
+            </li>
+            <li>
+                <a href="pdsan.html">PD & SAN</a>
+            </li>
+
+            <li>
+                <a href="equiarm.html">Equi & Arm</a>
+            </li>
+
+            <li>
+                <a href="racas.html">Raças</a>
+            </li>
+
+            <li>
+                <a href="origens.html">Origens</a>
+            </li>
+
+               <li>
+                <a href="abamestre.html"   class="marc">Ficha</a>
+            </li>
+        </ul>
+
+        <ul>
+            <p>
+                O mundo :
+            </p>
+            <li>
+               <a href="planetas.html"> Planetas</a>
+            </li>
+
+            <li>
+               <a href="acampamentos.html"> Acampamentos</a>
+            </li>
+
+            <li>
+                <a href="transportes.html">Transportes</a>
+            </li>
+
+            <li>
+                <a href="procurado.html">Procurado</a>
+            </li>
+            
+        </ul>
+    </header>
+
+
+<section class="aba-mestre">
+
+    <div class="layout">
+
+        <div class="lista-fichas">
+            <h2>Fichas</h2>
+            <ul id="listaFichas"></ul>
+            <button onclick="novaFicha()">+ Nova ficha</button>
+        </div>
+
+        <div class="ficha">
+
+            <h2>Ficha de Personagem</h2>
+
+            <input id="nome" placeholder="Nome do personagem">
+            <input id="jogador" placeholder="Nome do jogador">
+
+            <h3>Atributos</h3>
+            <div class="grid">
+                <label>Força <input type="number" id="forca"></label>
+                <label>Destreza <input type="number" id="destreza"></label>
+                <label>Constituição <input type="number" id="constituicao"></label>
+                <label>Inteligência <input type="number" id="inteligencia"></label>
+                <label>Sabedoria <input type="number" id="sabedoria"></label>
+                <label>Carisma <input type="number" id="carisma"></label>
+            </div>
+
+          <h3>Perícias</h3>
+
+<div class="pericia"><span>Acrobacia (DES)</span>
+<input type="number" id="acrobaciaBase">
+<label><input type="checkbox" id="acrobaciaTreinada">Treinada</label>
+<select id="acrobaciaProf">
+<option value="0">—</option><option value="5">PROF 1</option><option value="10">PROF 2</option><option value="15">PROF 3</option>
+</select>
+<input type="number" id="acrobaciaTotal" readonly>
+</div>
+
+<div class="pericia"><span>Mira (DES)</span>
+<input type="number" id="miraBase">
+<label><input type="checkbox" id="miraTreinada">Treinada</label>
+<select id="miraProf">
+<option value="0">—</option><option value="5">PROF 1</option><option value="10">PROF 2</option><option value="15">PROF 3</option>
+</select>
+<input type="number" id="miraTotal" readonly>
+</div>
+
+<div class="pericia"><span>Atletismo (FOR)</span>
+<input type="number" id="atletismoBase">
+<label><input type="checkbox" id="atletismoTreinada">Treinada</label>
+<select id="atletismoProf">
+<option value="0">—</option><option value="5">PROF 1</option><option value="10">PROF 2</option><option value="15">PROF 3</option>
+</select>
+<input type="number" id="atletismoTotal" readonly>
+</div>
+
+<div class="pericia"><span>Luta (FOR)</span>
+<input type="number" id="lutaBase">
+<label><input type="checkbox" id="lutaTreinada">Treinada</label>
+<select id="lutaProf">
+<option value="0">—</option><option value="5">PROF 1</option><option value="10">PROF 2</option><option value="15">PROF 3</option>
+</select>
+<input type="number" id="lutaTotal" readonly>
+</div>
+
+<div class="pericia"><span>Sobrevivência (SAB)</span>
+<input type="number" id="sobrevivenciaBase">
+<label><input type="checkbox" id="sobrevivenciaTreinada">Treinada</label>
+<select id="sobrevivenciaProf">
+<option value="0">—</option><option value="5">PROF 1</option><option value="10">PROF 2</option><option value="15">PROF 3</option>
+</select>
+<input type="number" id="sobrevivenciaTotal" readonly>
+</div>
+
+<div class="pericia"><span>Engano (CAR)</span>
+<input type="number" id="enganoBase">
+<label><input type="checkbox" id="enganoTreinada">Treinada</label>
+<select id="enganoProf">
+<option value="0">—</option><option value="5">PROF 1</option><option value="10">PROF 2</option><option value="15">PROF 3</option>
+</select>
+<input type="number" id="enganoTotal" readonly>
+</div>
+
+<div class="pericia"><span>Percepção (INT)</span>
+<input type="number" id="percepcaoBase">
+<label><input type="checkbox" id="percepcaoTreinada">Treinada</label>
+<select id="percepcaoProf">
+<option value="0">—</option><option value="5">PROF 1</option><option value="10">PROF 2</option><option value="15">PROF 3</option>
+</select>
+<input type="number" id="percepcaoTotal" readonly>
+</div>
+
+<div class="pericia"><span>Pilotagem (SAB)</span>
+<input type="number" id="pilotagemBase">
+<label><input type="checkbox" id="pilotagemTreinada">Treinada</label>
+<select id="pilotagemProf">
+<option value="0">—</option><option value="5">PROF 1</option><option value="10">PROF 2</option><option value="15">PROF 3</option>
+</select>
+<input type="number" id="pilotagemTotal" readonly>
+</div>
+
+<div class="pericia"><span>Intimidação (CAR)</span>
+<input type="number" id="intimidacaoBase">
+<label><input type="checkbox" id="intimidacaoTreinada">Treinada</label>
+<select id="intimidacaoProf">
+<option value="0">—</option><option value="5">PROF 1</option><option value="10">PROF 2</option><option value="15">PROF 3</option>
+</select>
+<input type="number" id="intimidacaoTotal" readonly>
+</div>
+
+<div class="pericia"><span>História (INT)</span>
+<input type="number" id="historiaBase">
+<label><input type="checkbox" id="historiaTreinada">Treinada</label>
+<select id="historiaProf">
+<option value="0">—</option><option value="5">PROF 1</option><option value="10">PROF 2</option><option value="15">PROF 3</option>
+</select>
+<input type="number" id="historiaTotal" readonly>
+</div>
+
+<div class="pericia"><span>Investigação (INT)</span>
+<input type="number" id="investigacaoBase">
+<label><input type="checkbox" id="investigacaoTreinada">Treinada</label>
+<select id="investigacaoProf">
+<option value="0">—</option><option value="5">PROF 1</option><option value="10">PROF 2</option><option value="15">PROF 3</option>
+</select>
+<input type="number" id="investigacaoTotal" readonly>
+</div>
+
+<div class="pericia"><span>Medicina (SAB)</span>
+<input type="number" id="medicinaBase">
+<label><input type="checkbox" id="medicinaTreinada">Treinada</label>
+<select id="medicinaProf">
+<option value="0">—</option><option value="5">PROF 1</option><option value="10">PROF 2</option><option value="15">PROF 3</option>
+</select>
+<input type="number" id="medicinaTotal" readonly>
+</div>
+
+<div class="pericia"><span>Persuasão (CAR)</span>
+<input type="number" id="persuasaoBase">
+<label><input type="checkbox" id="persuasaoTreinada">Treinada</label>
+<select id="persuasaoProf">
+<option value="0">—</option><option value="5">PROF 1</option><option value="10">PROF 2</option><option value="15">PROF 3</option>
+</select>
+<input type="number" id="persuasaoTotal" readonly>
+</div>
+
+<div class="pericia"><span>Religião (INT)</span>
+<input type="number" id="religiaoBase">
+<label><input type="checkbox" id="religiaoTreinada">Treinada</label>
+<select id="religiaoProf">
+<option value="0">—</option><option value="5">PROF 1</option><option value="10">PROF 2</option><option value="15">PROF 3</option>
+</select>
+<input type="number" id="religiaoTotal" readonly>
+</div>
+
+<div class="pericia"><span>Manipulação (SAB)</span>
+<input type="number" id="manipulacaoBase">
+<label><input type="checkbox" id="manipulacaoTreinada">Treinada</label>
+<select id="manipulacaoProf">
+<option value="0">—</option><option value="5">PROF 1</option><option value="10">PROF 2</option><option value="15">PROF 3</option>
+</select>
+<input type="number" id="manipulacaoTotal" readonly>
+</div>
+
+<div class="pericia"><span>Iniciativa (DES)</span>
+<input type="number" id="iniciativaBase">
+<label><input type="checkbox" id="iniciativaTreinada">Treinada</label>
+<select id="iniciativaProf">
+<option value="0">—</option><option value="5">PROF 1</option><option value="10">PROF 2</option><option value="15">PROF 3</option>
+</select>
+<input type="number" id="iniciativaTotal" readonly>
+</div>
+
+<div class="pericia"><span>Crime (SAB)</span>
+<input type="number" id="crimeBase">
+<label><input type="checkbox" id="crimeTreinada">Treinada</label>
+<select id="crimeProf">
+<option value="0">—</option><option value="5">PROF 1</option><option value="10">PROF 2</option><option value="15">PROF 3</option>
+</select>
+<input type="number" id="crimeTotal" readonly>
+</div>
+
+<div class="pericia"><span>Adestramento (SAB)</span>
+<input type="number" id="adestramentoBase">
+<label><input type="checkbox" id="adestramentoTreinada">Treinada</label>
+<select id="adestramentoProf">
+<option value="0">—</option><option value="5">PROF 1</option><option value="10">PROF 2</option><option value="15">PROF 3</option>
+</select>
+<input type="number" id="adestramentoTotal" readonly>
+</div>
+
+<div class="pericia"><span>Diplomacia (INT)</span>
+<input type="number" id="diplomaciaBase">
+<label><input type="checkbox" id="diplomaciaTreinada">Treinada</label>
+<select id="diplomaciaProf">
+<option value="0">—</option><option value="5">PROF 1</option><option value="10">PROF 2</option><option value="15">PROF 3</option>
+</select>
+<input type="number" id="diplomaciaTotal" readonly>
+</div>
+
+<div class="pericia"><span>Furtividade (DES)</span>
+<input type="number" id="furtividadeBase">
+<label><input type="checkbox" id="furtividadeTreinada">Treinada</label>
+<select id="furtividadeProf">
+<option value="0">—</option><option value="5">PROF 1</option><option value="10">PROF 2</option><option value="15">PROF 3</option>
+</select>
+<input type="number" id="furtividadeTotal" readonly>
+</div>
+
+<div class="pericia"><span>Tecnologia (SAB)</span>
+<input type="number" id="tecnologiaBase">
+<label><input type="checkbox" id="tecnologiaTreinada">Treinada</label>
+<select id="tecnologiaProf">
+<option value="0">—</option><option value="5">PROF 1</option><option value="10">PROF 2</option><option value="15">PROF 3</option>
+</select>
+<input type="number" id="tecnologiaTotal" readonly>
+</div>
+
+<div class="pericia"><span>Reflexos (DES)</span>
+<input type="number" id="reflexosBase">
+<label><input type="checkbox" id="reflexosTreinada">Treinada</label>
+<select id="reflexosProf">
+<option value="0">—</option><option value="5">PROF 1</option><option value="10">PROF 2</option><option value="15">PROF 3</option>
+</select>
+<input type="number" id="reflexosTotal" readonly>
+</div>
+
+
+           <h3>Status</h3>
+
+<input type="number" id="pv" placeholder="PV">
+<input type="number" id="sanidade" placeholder="Sanidade">
+<input type="number" id="xp" placeholder="XP">
+
+<textarea id="resistencia" placeholder="Resistências"></textarea>
+
+
+           <h3>História</h3>
+
+<input type="text" id="origem" placeholder="Origem">
+<input type="text" id="raca" placeholder="Raça">
+
+<textarea id="anotacoes" placeholder="História / Anotações"></textarea>
+
+
+            <div class="botoes">
+                <button onclick="salvarFicha()">Salvar</button>
+                <button class="remover" onclick="removerFicha()">Remover</button>
+            </div>
+
+        </div>
+
+        <h3>Inventário</h3>
+
+<div class="inventario-box">
+
+    <textarea id="inventario" placeholder="Itens, equipamentos, consumíveis..."></textarea>
+
+    <textarea id="armas" placeholder="Armas, dano, alcance, efeitos..."></textarea>
+
+</div>
+
+<div class="acoes-ficha">
+  <button onclick="exportarFicha()" class="btn exportar">Exportar Ficha</button>
+
+  <label class="btn importar">
+    Importar Ficha
+    <input type="file" onchange="importarFicha(event)" hidden>
+  </label>
+</div>
+
+
+
+
+    </div>
+
+</section>
+
+<footer>
+    <p>Disponibilização do link do site no canal SISTEMA do servidor do discord</p>
+
+    <p>
+        Copyright © <span id="year"></span> All rights reserved
+    </p>
+
+    <a href="https://discord.gg/hQNzhHEkEH">
+        <img src="../img/discordlogo.jpg" alt="discordlogo">
+    </a>
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<script src="../js/script.js"></script>
+
+<script src="../js/mestre.js"></script>
+</body>
+</html>

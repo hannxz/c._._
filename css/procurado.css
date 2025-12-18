@@ -2,6 +2,11 @@
   font-family: "Segoe UI", Arial, sans-serif;
 }
 
+body {
+  background: radial-gradient(circle at top, #2b0000, #120000);
+  color: #f2dede;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
 
 
 header ul{
@@ -9,12 +14,13 @@ header ul{
    gap: 20px;
    padding: 10px 20px;
    justify-content: center;
-   background-color: #557570;
-   color: #D6DCD8;
+   background: linear-gradient(90deg, #5a0000, #8b0000);
+   color: #ffeaea;
 }
 
 header ul p{
      font-weight: bolder;
+     color: #ffd6d6;
      font-size: 1.2rem;
 }
 
@@ -22,50 +28,89 @@ header ul p{
 
 header ul li a{
     font-size: 1.2rem;
-    color: #376d4b;
-    background-color: #a4ded8;
+    color: #5a0000;
+    background-color: #ffb3b3;
     border-radius: 50px;
-    border: 3px solid #529f6e;
+    border: 3px solid #b30000;
     padding: 5px 10px;
      cursor: pointer;
 }
 
 header a.marc{
-      background-color: #7fb7be;
-        color: #3c57a7;
-          border: 3px solid rgb(108, 114, 161);
+      background-color: #ff4d4d;
+        color: #300000;
+          border: 3px solid #ff8080;
         font-weight: bolder;
 }
 
  header a:hover {
-        background-color: #D6DCD8;
-        color: #68afa4;
-          border: 3px solid rgb(163, 170, 233);
+        background-color: #ffd6d6;
+        color: #7a0000;
+          border: 3px solid #ff9999;
         font-weight: bolder;
     }
 
 
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.sec1 {
+  text-align: center;
+  border: 4px solid #b30000;
+  padding: 30px;
+  background: linear-gradient(180deg, #7a0000, #3b0000);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+}
+
+.sec1 h1 {
+  font-size: 3rem;
+  letter-spacing: 6px;
+  color: #ffcccc;
+  margin-bottom: 10px;
+}
+
+.sec1 p {
+  font-size: 1.2rem;
+  color: #ffd6d6;
+  font-weight: bold;
+}
+
+.sec2,
+.sec3 {
+  margin-top: 30px;
+  padding: 25px;
+  border-left: 6px solid #ff4d4d;
+  background-color: rgba(80, 0, 0, 0.7);
+  box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.2);
+}
+
+.sec2 p,
+.sec3 p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ffeaea;
+}
+
+
 footer {
-    background: url(../img/fundo2.jpg);
-    padding: 1.5vw 1.5vw;
+    background-color: #3c0a0a;
+    padding: 20px;
+    text-align: center;
+    color: #d6dcd8;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    text-align: center;
 }
 
 footer img {
-    margin: 20px 10px;
     max-width: 7%;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 footer p {
-    font-size: 1.3rem;
-    color: #244731;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-weight: bolder;
-    background-color: #a4ded8;
+    font-weight: bold;
 }
