@@ -1,16 +1,13 @@
-// Usuários permitidos
 const allowedUsers = [
     "shod",
     "lunna",
     "bradesco",
-    "powder",
     "pedroca",
     "banana",
     "ren"
 ];
 
-// Senha especial do Ren
-const REN_PASSWORD = "129148"; // você escolhe a senha
+const REN_PASSWORD = "129148";
 
 function saveName() {
     const input = document.getElementById("playerName").value.trim().toLowerCase();
@@ -25,7 +22,6 @@ function saveName() {
         return;
     }
 
-    // Caso especial: REN
     if (input === "ren") {
         const password = prompt("Informe a senha:");
 
@@ -34,14 +30,12 @@ function saveName() {
             return;
         }
 
-        // Salva o nome e redireciona para a página secreta
         localStorage.setItem("playerName", "Ren");
         window.location.href = "../c._._/htmlregras/pag4.html";
         return;
     }
 
-    // Usuários normais
     const formattedName = input.charAt(0).toUpperCase() + input.slice(1);
     localStorage.setItem("playerName", formattedName);
-    window.location.href = "../c._._/html/pag2.html"; // enigma
+    window.location.href = "../c._._/html/pag2.html";
 }

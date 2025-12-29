@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Player HUD</title>
+
+<!-- FONTE BONITA -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    background: transparent;
+    font-family: 'Montserrat', sans-serif;
+    color: #eaeaea;
+}
+
+.hud {
+    display: flex;
+    align-items: center;
+    background: rgb(9, 3, 93);
+    border: 2px solid #aaa;
+    padding: 6px 8px;
+    width: 420px;
+
+}
+
+.xp-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    top: -2px;
+font-size: 9px;
+color: #000;
+
+    left: 0;
+    color: #cfcfcf;
+}
+
+
+/* PORTRAIT */
+.portrait {
+  width: 110px;
+height: 110px;
+    border: 2px solid #aaa;
+    margin-right: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* INFO */
+.info {
+    flex: 1;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2px;
+}
+
+/* BARRAS */
+.bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(6, 28, 73, 0.2);
+    margin-top: 3px;
+    position: relative;
+}
+
+.fill {
+    height: 100%;
+}
+
+.pv { background: #b00000; }
+.san { background: #3b5cff; }
+.xp { background: #2fa84f; }
+
+/* NIVEL */
+.level {
+    width: 36px;
+    height: 36px;
+    border: 2px solid #aaa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-left: 8px;
+    
+}
+</style>
+</head>
+
+<body>
+
+<div class="hud">
+
+    <!-- MINI PORTRAIT -->
+   <div class="portrait">
+    <img src="portrait1.jpg" alt="portrait">
+</div>
+
+
+    <!-- STATUS -->
+    <div class="info">
+        <div class="line">
+            <span>PV</span>
+            <span>62 / 62</span>
+        </div>
+        <div class="bar">
+            <div class="fill pv" style="width:100%"></div>
+        </div>
+
+        <div class="line" style="margin-top:4px;">
+            <span>SAN</span>
+            <span>50 / 45</span>
+        </div>
+        <div class="bar">
+            <div class="fill san" style="width:100%"></div>
+        </div>
+
+        <div class="bar" style="margin-top:6px;">
+    <div class="fill xp" style="width:55%"></div>
+    <div class="xp-text">550 / 1000</div>
+</div>
+
+    </div>
+
+    <!-- NIVEL -->
+    <div class="level">4</div>
+
+</div>
+
+</body>
+</html>

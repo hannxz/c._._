@@ -81,6 +81,22 @@
             <input id="nome" placeholder="Nome do personagem">
             <input id="jogador" placeholder="Nome do jogador">
 
+            <h3>Retrato do Personagem</h3>
+
+<div class="portrait-box">
+  <img id="portraitPreview" src="" alt="Portrait">
+  
+  <label class="btn upload">
+    Escolher imagem
+    <input type="file" id="portraitInput" accept="image/png, image/jpeg" hidden>
+  </label>
+
+  <button onclick="removerPortrait()" class="btn-remove">
+    Remover imagem
+  </button>
+</div>
+
+
             <h3>Atributos</h3>
             <div class="grid">
                 <label>Força <input type="number" id="forca"></label>
@@ -296,7 +312,46 @@
 
 <input type="number" id="pv" placeholder="PV">
 <input type="number" id="sanidade" placeholder="Sanidade">
-<input type="number" id="xp" placeholder="XP">
+
+
+
+
+<section class="xp-box">
+  <h3>Experiência</h3>
+
+  <div class="xp-info">
+    <span>Nível: <strong id="nivelAtual">1</strong></span>
+    <span>XP: <strong id="xpAtual">0</strong></span>
+  </div>
+
+  <div class="xp-bar-container">
+  <div class="xp-bar" id="xpBar"></div>
+</div>
+
+<p id="xpAviso" class="xp-warning"></p>
+
+
+  <div class="xp-marks">
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+  </div>
+
+  <div class="xp-controls">
+    <input type="number" id="xpInput" placeholder="+ XP">
+    <button onclick="adicionarXP()">Adicionar XP</button>
+  </div>
+
+  <div class="xp-controls remove-xp">
+  <input type="number" id="xpRemoverInput" placeholder="- XP">
+  <button class="btn-remove" onclick="removerXP()">Remover XP</button>
+</div>
+
+
+  <p id="xpAviso" class="xp-warning"></p>
+</section>
+
 
 <textarea id="resistencia" placeholder="Resistências"></textarea>
 

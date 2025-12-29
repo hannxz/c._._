@@ -1,6 +1,12 @@
 const inventario = document.getElementById("inventario");
 const armas = document.getElementById("armas");
 
+const portraitInput = document.getElementById("portraitInput");
+const portraitPreview = document.getElementById("portraitPreview");
+
+let portraitData = "";
+
+
 let fichas = JSON.parse(localStorage.getItem("fichas")) || [];
 let fichaAtual = null;
 
@@ -17,23 +23,54 @@ function atualizarLista() {
 }
 
 function novaFicha() {
-    fichaAtual = null;
-    limparCampos();
+  fichaAtual = null;
+  limparCampos();
+  xpTotal = 0;
+  atualizarXP();
 }
 
-function salvarFicha() {
-    const ficha = {
-  nome: nome.value,
-  jogador: jogador.value,
+portraitInput.addEventListener("change", () => {
+  const file = portraitInput.files[0];
+  if (!file) return;
 
-  atributos: {
-    forca: forca.value,
-    destreza: destreza.value,
-    constituicao: constituicao.value,
-    inteligencia: inteligencia.value,
-    sabedoria: sabedoria.value,
-    carisma: carisma.value
-  },
+  const reader = new FileReader();
+  reader.onload = e => {
+    portraitData = e.target.result;
+    portraitPreview.src = portraitData;
+  };
+  reader.readAsDataURL(file);
+});
+
+
+function removerPortrait() {
+  portraitData = "";
+  portraitPreview.src = "";
+  portraitInput.value = ""; 
+}
+
+
+
+
+function salvarFicha() {
+  const ficha = {
+    nome: nome.value,
+    jogador: jogador.value,
+
+    portrait: portraitData,
+
+    atributos: {
+      forca: forca.value,
+      destreza: destreza.value,
+      constituicao: constituicao.value,
+      inteligencia: inteligencia.value,
+      sabedoria: sabedoria.value,
+      carisma: carisma.value
+    },
+
+    xp: {
+      total: xpTotal
+    },
+
 
  pericias: Object.fromEntries(
   pericias.map(p => [
@@ -50,7 +87,6 @@ function salvarFicha() {
 
   pv: pv.value,
   sanidade: sanidade.value,
-  xp: xp.value,
   resistencia: resistencia.value,
 
   origem: origem.value,
@@ -73,11 +109,20 @@ function salvarFicha() {
 }
 
 function abrirFicha(index) {
+   
     fichaAtual = index;
     const f = fichas[index];
 
     nome.value = f.nome || "";
     jogador.value = f.jogador || "";
+    portraitData = f.portrait || "";
+portraitPreview.src = portraitData;
+    if (!f.xp) f.xp = { total: 0 };
+
+    xpTotal = f.xp.total;
+    atualizarXP();
+
+
 
     forca.value = f.atributos.forca || 0;
     destreza.value = f.atributos.destreza || 0;
@@ -108,7 +153,6 @@ function abrirFicha(index) {
 
     pv.value = f.pv || 0;
     sanidade.value = f.sanidade || 0;
-    xp.value = f.xp || 0;
 
     resistencia.value = f.resistencia || "";
     origem.value = f.origem || "";
@@ -117,6 +161,101 @@ function abrirFicha(index) {
 
     inventario.value = f.inventario || "";
     armas.value = f.armas || "";
+}
+
+let xpTotal = 0;
+let nivel = 1;
+
+const niveisXP = [
+  { nivel: 1, min: 0, max: 300 },
+  { nivel: 2, min: 300, max: 900 },
+  { nivel: 3, min: 900, max: 2700 },
+  { nivel: 4, min: 2700, max: 6200 }
+];
+
+function calcularNivel() {
+  for (let i = niveisXP.length - 1; i >= 0; i--) {
+    if (xpTotal >= niveisXP[i].min) {
+      return niveisXP[i].nivel;
+    }
+  }
+  return 1;
+}
+
+function atualizarXP() {
+  const nivelAnterior = nivel;
+  nivel = calcularNivel();
+
+  const infoNivel = niveisXP.find(n => n.nivel === nivel);
+  const progressoAtual = xpTotal - infoNivel.min;
+  const progressoMax = infoNivel.max - infoNivel.min;
+
+  const porcentagem = Math.min((progressoAtual / progressoMax) * 100, 100);
+
+  document.getElementById("xpAtual").innerText = xpTotal;
+  document.getElementById("nivelAtual").innerText = nivel;
+  document.getElementById("xpBar").style.width = porcentagem + "%";
+
+  const aviso = document.getElementById("xpAviso");
+
+  if (nivel > nivelAnterior) {
+    const bar = document.getElementById("xpBar");
+    bar.classList.add("level-up");
+
+    setTimeout(() => bar.classList.remove("level-up"), 2000);
+
+    aviso.innerText = `Nível ${nivel} alcançado!`;
+  } else if (nivel === 4) {
+    aviso.innerText = "Nível máximo atingido.";
+  } else {
+    aviso.innerText = "";
+  }
+
+   if (fichaAtual !== null) {
+    fichas[fichaAtual].xp.total = xpTotal;
+    localStorage.setItem("fichas", JSON.stringify(fichas));
+  }
+}
+
+
+function adicionarXP() {
+  const valor = Number(document.getElementById("xpInput").value);
+  if (!valor || valor <= 0) return;
+
+  xpTotal += valor;
+  if (xpTotal > 6200) xpTotal = 6200;
+
+  document.getElementById("xpInput").value = "";
+  atualizarXP();
+}
+
+function removerXP() {
+  const valor = Number(document.getElementById("xpRemoverInput").value);
+  if (!valor || valor <= 0) return;
+
+  xpTotal -= valor;
+  if (xpTotal < 0) xpTotal = 0;
+
+  document.getElementById("xpRemoverInput").value = "";
+
+  const bar = document.getElementById("xpBar");
+  bar.classList.add("loss");
+  setTimeout(() => bar.classList.remove("loss"), 1200);
+
+  atualizarXP();
+}
+
+
+function salvarXP() {
+  localStorage.setItem("xpFicha", JSON.stringify({ xpTotal }));
+}
+
+function carregarXP() {
+  const dados = JSON.parse(localStorage.getItem("xpFicha"));
+  if (!dados) return;
+
+  xpTotal = dados.xpTotal || 0;
+  atualizarXP();
 }
 
 
@@ -132,6 +271,8 @@ function removerFicha() {
 
 function limparCampos() {
     document.querySelectorAll("input, textarea").forEach(el => {
+      portraitData = "";
+portraitPreview.src = "";
         if (el.type === "checkbox") el.checked = false;
         else el.value = "";
     });

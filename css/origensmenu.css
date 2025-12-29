@@ -1,0 +1,121 @@
+
+* {
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+header ul{
+    display: flex;
+   gap: 20px;
+   padding: 10px 20px;
+   justify-content: center;
+   background-color: #575575;
+   color: #D6DCD8;
+}
+
+header ul p{
+     font-weight: bolder;
+     font-size: 1.2rem;
+}
+
+header ul li a{
+    font-size: 1.2rem;
+ transition: all 0.3s ease;
+ color: #00bfff;
+    background-color: #1e2a50;
+    border-radius: 50px;
+    border: 2px solid #00bfff;
+    padding: 5px 10px;
+     cursor: pointer;
+}
+
+header a.marc{
+   background-color: #007acc;
+    color: #ffffff;
+    border: 2px solid #00bfff;
+}
+
+ header a:hover {
+         background-color: #00bfff;
+    color: #0a1a3c;
+    font-weight: bolder;
+    }
+
+body {
+  background: #0f1220;
+  color: white;
+}
+
+.titulo {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #fbbf24;
+  letter-spacing: 3px;
+  font-size: 4rem;
+}
+
+.topo-botoes {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.btn-sobre {
+  background: transparent;
+  border: 2px solid #00c6ff;
+  color: #00c6ff;
+  padding: 10px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: bold;
+   transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-sobre:hover {
+  background: #00c6ff;
+  color: #0f1220;
+}
+
+
+.grid-origens {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.origem-btn {
+  background: linear-gradient(135deg, #00114a, #3a3a73);
+  color: #fff;
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.origem-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+footer {
+    background-color: #0a1a3c;
+    padding: 20px;
+    text-align: center;
+    color: #d6dcd8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+footer img {
+    max-width: 7%;
+    border-radius: 10px;
+}
+
+footer p {
+    font-weight: bold;
+}
